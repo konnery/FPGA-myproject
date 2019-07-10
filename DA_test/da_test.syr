@@ -1,0 +1,1033 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.43 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.43 secs
+ 
+--> Reading design: da_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "da_test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "da_test"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : da_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\ipcore_dir\pll_ip.v" into library work
+Parsing module <pll_ip>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\uarttx.v" into library work
+Parsing module <uarttx>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\uartrx.v" into library work
+Parsing module <uartrx>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\uartctrl.v" into library work
+Parsing module <uartctrl>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\ipcore_dir\fifo8_1_ip.v" into library work
+Parsing module <fifo8_1_ip>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\ipcore_dir\dds.v" into library work
+Parsing module <dds>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\clk_div.v" into library work
+Parsing module <clk_div>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\chipscope_ila.v" into library work
+Parsing module <chipscope_ila>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\chipscope_icon.v" into library work
+Parsing module <chipscope_icon>.
+Analyzing Verilog file "E:\FPGA\0_Project\DA_test\da_test.v" into library work
+Parsing module <da_test>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <da_test>.
+
+Elaborating module <dds>.
+WARNING:HDLCompiler:1127 - "E:\FPGA\0_Project\DA_test\da_test.v" Line 41: Assignment to sine ignored, since the identifier is never used
+
+Elaborating module <pll_ip>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "E:\FPGA\0_Project\DA_test\ipcore_dir\pll_ip.v" Line 129: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "E:\FPGA\0_Project\DA_test\da_test.v" Line 55: Assignment to locked ignored, since the identifier is never used
+
+Elaborating module <clk_div>.
+
+Elaborating module <uartrx>.
+
+Elaborating module <fifo8_1_ip>.
+WARNING:HDLCompiler:1499 - "E:\FPGA\0_Project\DA_test\ipcore_dir\fifo8_1_ip.v" Line 39: Empty module <fifo8_1_ip> remains a black box.
+WARNING:HDLCompiler:1127 - "E:\FPGA\0_Project\DA_test\da_test.v" Line 117: Assignment to valid ignored, since the identifier is never used
+
+Elaborating module <uarttx>.
+
+Elaborating module <uartctrl>.
+
+Elaborating module <chipscope_icon>.
+
+Elaborating module <chipscope_ila>.
+WARNING:HDLCompiler:634 - "E:\FPGA\0_Project\DA_test\da_test.v" Line 162: Net <TRIG0[255]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <da_test>.
+    Related source file is "E:\FPGA\0_Project\DA_test\da_test.v".
+INFO:Xst:3210 - "E:\FPGA\0_Project\DA_test\da_test.v" line 36: Output port <sine> of the instance <dds_2MHz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA\0_Project\DA_test\da_test.v" line 36: Output port <phase_out> of the instance <dds_2MHz> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA\0_Project\DA_test\da_test.v" line 48: Output port <LOCKED> of the instance <pll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA\0_Project\DA_test\da_test.v" line 73: Output port <dataerror> of the instance <u1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA\0_Project\DA_test\da_test.v" line 73: Output port <frameerror> of the instance <u1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA\0_Project\DA_test\da_test.v" line 107: Output port <valid> of the instance <fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA\0_Project\DA_test\da_test.v" line 137: Output port <idle> of the instance <u2> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <TRIG0<255:9>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <dadata>.
+    Found 8-bit adder for signal <ook_out[7]_PWR_1_o_add_5_OUT> created at line 130.
+    Found 1x8-bit multiplier for signal <n0020> created at line 123.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+Unit <da_test> synthesized.
+
+Synthesizing Unit <pll_ip>.
+    Related source file is "E:\FPGA\0_Project\DA_test\ipcore_dir\pll_ip.v".
+    Summary:
+	no macro.
+Unit <pll_ip> synthesized.
+
+Synthesizing Unit <clk_div>.
+    Related source file is "E:\FPGA\0_Project\DA_test\clk_div.v".
+    Found 16-bit register for signal <cnt>.
+    Found 1-bit register for signal <clk_out>.
+    Found 16-bit subtractor for signal <GND_7_o_GND_7_o_sub_1_OUT> created at line 38.
+    Found 17-bit subtractor for signal <GND_7_o_GND_7_o_sub_5_OUT> created at line 42.
+    Found 16-bit adder for signal <cnt[15]_GND_7_o_add_6_OUT> created at line 44.
+    Found 32-bit comparator greater for signal <n0002> created at line 38
+    Found 16-bit comparator lessequal for signal <n0004> created at line 42
+    Found 32-bit comparator greater for signal <GND_7_o_GND_7_o_LessThan_6_o> created at line 42
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <clk_div> synthesized.
+
+Synthesizing Unit <uartrx>.
+    Related source file is "E:\FPGA\0_Project\DA_test\uartrx.v".
+        paritymode = 1'b0
+    Found 1-bit register for signal <rxfall>.
+    Found 1-bit register for signal <receive>.
+    Found 1-bit register for signal <idle>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <rdsig>.
+    Found 8-bit register for signal <dataout>.
+    Found 1-bit register for signal <presult>.
+    Found 1-bit register for signal <dataerror>.
+    Found 1-bit register for signal <frameerror>.
+    Found 1-bit register for signal <rxbuf>.
+    Found 8-bit adder for signal <cnt[7]_GND_8_o_add_5_OUT> created at line 66.
+    Found 1-bit comparator not equal for signal <presult_rx_equal_15_o> created at line 136
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <uartrx> synthesized.
+
+Synthesizing Unit <uarttx>.
+    Related source file is "E:\FPGA\0_Project\DA_test\uarttx.v".
+        paritymode = 1'b0
+    Found 1-bit register for signal <wrsigrise>.
+    Found 1-bit register for signal <send>.
+    Found 1-bit register for signal <tx>.
+    Found 1-bit register for signal <idle>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <presult>.
+    Found 1-bit register for signal <wrsigbuf>.
+    Found 8-bit adder for signal <cnt[7]_GND_11_o_add_5_OUT> created at line 63.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+Unit <uarttx> synthesized.
+
+Synthesizing Unit <uartctrl>.
+    Related source file is "E:\FPGA\0_Project\DA_test\uartctrl.v".
+    Found 1-bit register for signal <rx_data_valid>.
+    Found 16-bit register for signal <uart_cnt>.
+    Found 3-bit register for signal <uart_stat>.
+    Found 1-bit register for signal <data_sel>.
+    Found 9-bit register for signal <k>.
+    Found 8-bit register for signal <dataout_reg>.
+    Found 1-bit register for signal <wrsig_reg>.
+    Found 18-bit register for signal <uart_wait>.
+    Found finite state machine <FSM_0> for signal <uart_stat>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rdsig (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 18-bit adder for signal <uart_wait[17]_GND_12_o_add_5_OUT> created at line 83.
+    Found 9-bit adder for signal <k[8]_GND_12_o_add_29_OUT> created at line 135.
+    Found 16-bit adder for signal <uart_cnt[15]_GND_12_o_add_30_OUT> created at line 138.
+    Found 32x8-bit Read Only RAM for signal <k[4]_X_11_o_wide_mux_26_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <uartctrl> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x8-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 1
+ 8x1-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 15
+ 16-bit adder                                          : 4
+ 16-bit subtractor                                     : 3
+ 17-bit subtractor                                     : 3
+ 18-bit adder                                          : 1
+ 8-bit adder                                           : 3
+ 9-bit adder                                           : 1
+# Registers                                            : 31
+ 1-bit register                                        : 20
+ 16-bit register                                       : 4
+ 18-bit register                                       : 1
+ 8-bit register                                        : 5
+ 9-bit register                                        : 1
+# Comparators                                          : 10
+ 1-bit comparator not equal                            : 1
+ 16-bit comparator lessequal                           : 3
+ 32-bit comparator greater                             : 6
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 6
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/dds.ngc>.
+Reading core <chipscope_ila.ngc>.
+Reading core <ipcore_dir/fifo8_1_ip.ngc>.
+Reading core <chipscope_icon.ngc>.
+Loading core <dds> for timing and area information for instance <dds_2MHz>.
+Loading core <chipscope_ila> for timing and area information for instance <ila_filter_debug>.
+Loading core <fifo8_1_ip> for timing and area information for instance <fifo>.
+Loading core <chipscope_icon> for timing and area information for instance <icon_debug>.
+
+Synthesizing (advanced) Unit <da_test>.
+	Multiplier <Mmult_n0020> in block <da_test> and adder/subtractor <Madd_ook_out[7]_PWR_1_o_add_5_OUT> in block <da_test> are combined into a MAC<Maddsub_n0020>.
+	The following registers are also absorbed by the MAC: <da_data> in block <da_test>.
+Unit <da_test> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uartctrl>.
+The following registers are absorbed into counter <uart_wait>: 1 register on signal <uart_wait>.
+The following registers are absorbed into counter <uart_cnt>: 1 register on signal <uart_cnt>.
+The following registers are absorbed into counter <k>: 1 register on signal <k>.
+INFO:Xst:3231 - The small RAM <Mram_k[4]_X_11_o_wide_mux_26_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <k<4:0>>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <uartctrl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x8-bit single-port distributed Read Only RAM        : 1
+# MACs                                                 : 1
+ 8x1-to-8-bit MAC                                      : 1
+# Adders/Subtractors                                   : 11
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 3
+ 17-bit subtractor                                     : 3
+ 8-bit adder                                           : 2
+# Counters                                             : 3
+ 16-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 100
+ Flip-Flops                                            : 100
+# Comparators                                          : 10
+ 1-bit comparator not equal                            : 1
+ 16-bit comparator lessequal                           : 3
+ 32-bit comparator greater                             : 6
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 6
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u3/FSM_0> on signal <uart_stat[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 11
+-------------------
+WARNING:Xst:1710 - FF/Latch <dataout_reg_7> (without init value) has a constant value of 0 in block <uartctrl>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <da_test> ...
+
+Optimizing unit <uartrx> ...
+
+Optimizing unit <uarttx> ...
+
+Optimizing unit <uartctrl> ...
+WARNING:Xst:2677 - Node <u1/dataerror> of sequential type is unconnected in block <da_test>.
+WARNING:Xst:2677 - Node <u1/presult> of sequential type is unconnected in block <da_test>.
+WARNING:Xst:2677 - Node <u1/frameerror> of sequential type is unconnected in block <da_test>.
+WARNING:Xst:1710 - FF/Latch <u3/uart_cnt_9> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u3/uart_cnt_8> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u3/uart_cnt_12> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u3/uart_cnt_10> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u3/uart_cnt_11> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u3/uart_cnt_15> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u3/uart_cnt_13> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u3/uart_cnt_14> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_wr/cnt_8> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_wr/cnt_9> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_wr/cnt_10> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_wr/cnt_11> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_wr/cnt_12> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_wr/cnt_13> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_wr/cnt_14> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_wr/cnt_15> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_5> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_6> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_7> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_8> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_9> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_10> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_11> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_12> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_13> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_14> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_rd/cnt_15> (without init value) has a constant value of 0 in block <da_test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <clk_rd/cnt_0> in Unit <da_test> is equivalent to the following FF/Latch, which will be removed : <clk_wr/cnt_0> 
+INFO:Xst:2261 - The FF/Latch <u3/uart_stat_FSM_FFd2> in Unit <da_test> is equivalent to the following FF/Latch, which will be removed : <u3/data_sel> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block da_test, actual ratio is 15.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 120
+ Flip-Flops                                            : 120
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : da_test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1095
+#      GND                         : 7
+#      INV                         : 22
+#      LUT1                        : 118
+#      LUT2                        : 122
+#      LUT3                        : 50
+#      LUT4                        : 112
+#      LUT5                        : 37
+#      LUT6                        : 159
+#      MUXCY                       : 97
+#      MUXCY_L                     : 196
+#      MUXF5                       : 2
+#      MUXF6                       : 1
+#      MUXF7                       : 15
+#      MUXF8                       : 2
+#      VCC                         : 5
+#      XORCY                       : 150
+# FlipFlops/Latches                : 1588
+#      FD                          : 621
+#      FDC                         : 107
+#      FDCE                        : 51
+#      FDE                         : 69
+#      FDP                         : 528
+#      FDPE                        : 2
+#      FDR                         : 89
+#      FDR_1                       : 1
+#      FDRE                        : 106
+#      FDS                         : 11
+#      FDSE                        : 2
+#      LDC                         : 1
+# RAMS                             : 31
+#      RAMB16BWER                  : 29
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 418
+#      SRL16                       : 256
+#      SRL16E                      : 1
+#      SRLC16E                     : 39
+#      SRLC32E                     : 122
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 13
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 10
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Others                           : 1
+#      BSCAN_SPARTAN6              : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1588  out of  18224     8%  
+ Number of Slice LUTs:                 1038  out of   9112    11%  
+    Number used as Logic:               620  out of   9112     6%  
+    Number used as Memory:              418  out of   2176    19%  
+       Number used as SRL:              418
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2127
+   Number with an unused Flip Flop:     539  out of   2127    25%  
+   Number with an unused LUT:          1089  out of   2127    51%  
+   Number of fully used LUT-FF pairs:   499  out of   2127    23%  
+   Number of unique control sets:        76
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               30  out of     32    93%  
+    Number using Block RAM only:         30
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+Clock Signal                                                                      | Clock buffer(FF name)                                       | Load  |
+----------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+clk_Bund/clk_out                                                                  | BUFG                                                        | 95    |
+clk                                                                               | DCM_SP:CLK0                                                 | 1564  |
+icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                 | BUFG                                                        | 282   |
+icon_debug/CONTROL0<13>(icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(ila_filter_debug/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
+clk_rd/clk_out                                                                    | BUFG                                                        | 60    |
+clk_wr/clk_out                                                                    | BUFG                                                        | 64    |
+icon_debug/U0/iUPDATE_OUT                                                         | NONE(icon_debug/U0/U_ICON/U_iDATA_CMD)                      | 1     |
+----------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 9.265ns (Maximum Frequency: 107.933MHz)
+   Minimum input arrival time before clock: 6.596ns
+   Maximum output required time after clock: 4.162ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_Bund/clk_out'
+  Clock period: 7.140ns (frequency: 140.056MHz)
+  Total number of paths / destination ports: 2059 / 191
+-------------------------------------------------------------------------
+Delay:               3.570ns (Levels of Logic = 1)
+  Source:            u1/rdsig (FF)
+  Destination:       u3/uart_wait_17 (FF)
+  Source Clock:      clk_Bund/clk_out rising
+  Destination Clock: clk_Bund/clk_out falling
+
+  Data Path: u1/rdsig to u3/uart_wait_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             13   0.525   1.098  u1/rdsig (u1/rdsig)
+     LUT4:I3->O           18   0.254   1.234  u3/Mcount_uart_wait_val2 (u3/Mcount_uart_wait_val)
+     FDR:R                     0.459          u3/uart_wait_0
+    ----------------------------------------
+    Total                      3.570ns (1.238ns logic, 2.332ns route)
+                                       (34.7% logic, 65.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.628ns (frequency: 177.683MHz)
+  Total number of paths / destination ports: 4212 / 2093
+-------------------------------------------------------------------------
+Delay:               2.814ns (Levels of Logic = 2)
+  Source:            dds_2MHz/blk000000d1 (RAM)
+  Destination:       Maddsub_n00201_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: dds_2MHz/blk000000d1 to Maddsub_n00201_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO0    1   1.700   0.790  blk000000d1 (cosine<0>)
+     end scope: 'dds_2MHz:cosine<0>'
+     LUT2:I0->O            1   0.250   0.000  Maddsub_n0020_cosine<0>_x_dout1 (Maddsub_n0020_0)
+     FD:D                      0.074          Maddsub_n00201_7
+    ----------------------------------------
+    Total                      2.814ns (2.024ns logic, 0.790ns route)
+                                       (71.9% logic, 28.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Clock period: 9.265ns (frequency: 107.933MHz)
+  Total number of paths / destination ports: 4598 / 742
+-------------------------------------------------------------------------
+Delay:               9.265ns (Levels of Logic = 8)
+  Source:            ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[18].u_ramb18/U_RAMB18 (RAM)
+  Destination:       icon_debug/U0/U_ICON/U_TDO_reg (FF)
+  Source Clock:      icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+  Destination Clock: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[18].u_ramb18/U_RAMB18 to icon_debug/U0/U_ICON/U_TDO_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA7    1   2.100   0.958  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[18].u_ramb18/U_RAMB18 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<169>)
+     LUT6:I2->O            1   0.254   0.958  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_1914 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_1914)
+     LUT6:I2->O            1   0.254   0.958  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_145 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_145)
+     LUT6:I2->O            1   0.254   0.958  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_91 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_91)
+     LUT6:I2->O            1   0.254   0.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_41 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_4)
+     MUXF7:I0->O           1   0.163   0.790  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_2_f7 (U0/I_NO_D.U_ILA/iDATA_DOUT)
+     LUT3:I1->O            1   0.250   0.790  U0/I_NO_D.U_ILA/U_DOUT (CONTROL<3>)
+     end scope: 'ila_filter_debug:CONTROL<3>'
+     begin scope: 'icon_debug:CONTROL0<3>'
+     LUT6:I4->O            1   0.250   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O11 (U0/U_ICON/iTDO_next)
+     FDE:D                     0.074          U0/U_ICON/U_TDO_reg
+    ----------------------------------------
+    Total                      9.265ns (3.853ns logic, 5.412ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_rd/clk_out'
+  Clock period: 4.229ns (frequency: 236.463MHz)
+  Total number of paths / destination ports: 307 / 136
+-------------------------------------------------------------------------
+Delay:               4.229ns (Levels of Logic = 3)
+  Source:            fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i (FF)
+  Destination:       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_9 (FF)
+  Source Clock:      clk_rd/clk_out rising
+  Destination Clock: clk_rd/clk_out rising
+
+  Data Path: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i to fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.525   0.725  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i (empty)
+     end scope: 'fifo:empty'
+     INV:I->O              4   0.255   0.912  rd_en1_INV_0 (rd_en)
+     begin scope: 'fifo:rd_en'
+     LUT2:I0->O           19   0.250   1.260  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/ram_rd_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_rd_en)
+     FDCE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1
+    ----------------------------------------
+    Total                      4.229ns (1.332ns logic, 2.897ns route)
+                                       (31.5% logic, 68.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_wr/clk_out'
+  Clock period: 5.025ns (frequency: 199.005MHz)
+  Total number of paths / destination ports: 275 / 134
+-------------------------------------------------------------------------
+Delay:               5.025ns (Levels of Logic = 5)
+  Source:            fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Destination:       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Source Clock:      clk_wr/clk_out rising
+  Destination Clock: clk_wr/clk_out rising
+
+  Data Path: fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i to fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.525   0.790  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (full)
+     end scope: 'fifo:full'
+     LUT2:I0->O            2   0.250   1.156  wr_en1 (wr_en)
+     begin scope: 'fifo:wr_en'
+     LUT5:I0->O            1   0.254   0.682  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_174_o_MUX_21_o14 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_174_o_MUX_21_o13)
+     LUT3:I2->O            1   0.254   0.790  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_174_o_MUX_21_o15 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_174_o_MUX_21_o14)
+     LUT6:I4->O            2   0.250   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_174_o_MUX_21_o18 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_GND_174_o_MUX_21_o)
+     FDP:D                     0.074          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      5.025ns (1.607ns logic, 3.418ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'icon_debug/U0/iUPDATE_OUT'
+  Clock period: 2.300ns (frequency: 434.783MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.300ns (Levels of Logic = 1)
+  Source:            icon_debug/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       icon_debug/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      icon_debug/U0/iUPDATE_OUT rising
+  Destination Clock: icon_debug/U0/iUPDATE_OUT rising
+
+  Data Path: icon_debug/U0/U_ICON/U_iDATA_CMD to icon_debug/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.525   0.765  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.255   0.681  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                     0.074          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      2.300ns (0.854ns logic, 1.446ns route)
+                                       (37.1% logic, 62.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_Bund/clk_out'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              5.130ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       clk_rd/cnt_4 (FF)
+  Destination Clock: clk_Bund/clk_out rising
+
+  Data Path: reset to clk_rd/cnt_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   1.328   1.486  reset_IBUF (reset_IBUF)
+     INV:I->O             37   0.255   1.603  clk_Bund/reset_inv1_INV_0 (clk_Bund/reset_inv)
+     FDC:CLR                   0.459          clk_wr/cnt_1
+    ----------------------------------------
+    Total                      5.130ns (2.042ns logic, 3.088ns route)
+                                       (39.8% logic, 60.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 568 / 568
+-------------------------------------------------------------------------
+Offset:              6.024ns (Levels of Logic = 3)
+  Source:            icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       ila_filter_debug/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to ila_filter_debug/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT    3   0.000   0.766  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.254   1.796  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O          640   0.254   2.495  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE (CONTROL0<20>)
+     end scope: 'icon_debug:CONTROL0<20>'
+     begin scope: 'ila_filter_debug:CONTROL<20>'
+     FDP:PRE                   0.459          U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2
+    ----------------------------------------
+    Total                      6.024ns (0.967ns logic, 5.057ns route)
+                                       (16.1% logic, 83.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 317 / 306
+-------------------------------------------------------------------------
+Offset:              6.596ns (Levels of Logic = 5)
+  Source:            icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       ila_filter_debug/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE (FF)
+  Destination Clock: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to ila_filter_debug/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT    3   0.000   0.766  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.254   1.796  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O            3   0.254   0.874  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_LCE (CONTROL0<4>)
+     end scope: 'icon_debug:CONTROL0<4>'
+     begin scope: 'ila_filter_debug:CONTROL<4>'
+     LUT2:I0->O            1   0.250   0.681  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE)
+     INV:I->O             10   0.255   1.007  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD_n (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE_n)
+     FDRE:R                    0.459          U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[9].U_FDRE
+    ----------------------------------------
+    Total                      6.596ns (1.472ns logic, 5.124ns route)
+                                       (22.3% logic, 77.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_wr/clk_out'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              5.130ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN (FF)
+  Destination Clock: clk_wr/clk_out rising
+
+  Data Path: reset to fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   1.328   1.486  reset_IBUF (reset_IBUF)
+     INV:I->O             37   0.255   1.603  clk_Bund/reset_inv1_INV_0 (clk_Bund/reset_inv)
+     begin scope: 'fifo:rst'
+     FDP:PRE                   0.459          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d1
+    ----------------------------------------
+    Total                      5.130ns (2.042ns logic, 3.088ns route)
+                                       (39.8% logic, 60.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_rd/clk_out'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.130ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg (FF)
+  Destination Clock: clk_rd/clk_out rising
+
+  Data Path: reset to fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   1.328   1.486  reset_IBUF (reset_IBUF)
+     INV:I->O             37   0.255   1.603  clk_Bund/reset_inv1_INV_0 (clk_Bund/reset_inv)
+     begin scope: 'fifo:rst'
+     FDP:PRE                   0.459          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg
+    ----------------------------------------
+    Total                      5.130ns (2.042ns logic, 3.088ns route)
+                                       (39.8% logic, 60.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'icon_debug/U0/iUPDATE_OUT'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.120ns (Levels of Logic = 1)
+  Source:            icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL (PAD)
+  Destination:       icon_debug/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination Clock: icon_debug/U0/iUPDATE_OUT rising
+
+  Data Path: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL to icon_debug/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SEL     2   0.000   0.725  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/U_ICON/iSEL)
+     INV:I->O              1   0.255   0.681  U0/U_ICON/U_iSEL_n (U0/U_ICON/iSEL_n)
+     FDC:CLR                   0.459          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      2.120ns (0.714ns logic, 1.406ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            Maddsub_n00201_0 (FF)
+  Destination:       dadata<7> (PAD)
+  Source Clock:      clk falling
+
+  Data Path: Maddsub_n00201_0 to dadata<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  Maddsub_n00201_0 (Maddsub_n00201_0)
+     OBUF:I->O                 2.912          dadata_7_OBUF (dadata<7>)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_Bund/clk_out'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            u2/tx (FF)
+  Destination:       tx (PAD)
+  Source Clock:      clk_Bund/clk_out rising
+
+  Data Path: u2/tx to tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              2   0.525   0.725  u2/tx (u2/tx)
+     OBUF:I->O                 2.912          tx_OBUF (tx)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.525ns (Levels of Logic = 0)
+  Source:            icon_debug/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO (PAD)
+  Source Clock:      icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: icon_debug/U0/U_ICON/U_TDO_reg to icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.525   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_SPARTAN6:TDO         0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS
+    ----------------------------------------
+    Total                      0.525ns (0.525ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+clk                                              |    5.619|    1.324|    2.814|         |
+clk_rd/clk_out                                   |         |         |    3.372|         |
+icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    7.122|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_Bund/clk_out
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk_Bund/clk_out|    6.510|    1.535|    4.909|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_rd/clk_out
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_rd/clk_out |    4.229|         |         |         |
+clk_wr/clk_out |    1.280|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_wr/clk_out
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk_Bund/clk_out|    5.337|         |         |         |
+clk_rd/clk_out  |    1.280|         |         |         |
+clk_wr/clk_out  |    5.025|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock icon_debug/CONTROL0<13>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.269|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+clk                                              |    4.067|         |         |         |
+icon_debug/CONTROL0<13>                          |         |    4.308|         |         |
+icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    9.265|         |         |         |
+icon_debug/U0/iUPDATE_OUT                        |    2.958|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock icon_debug/U0/iUPDATE_OUT
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+icon_debug/U0/iUPDATE_OUT|    2.300|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 26.43 secs
+ 
+--> 
+
+Total memory usage is 267956 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

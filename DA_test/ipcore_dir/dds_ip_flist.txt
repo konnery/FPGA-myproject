@@ -1,0 +1,15 @@
+# Output products list for <dds_ip>
+dds_ip.asy
+dds_ip.gise
+dds_ip.ngc
+dds_ip.sym
+dds_ip.v
+dds_ip.veo
+dds_ip.xco
+dds_ip.xise
+dds_ip\doc\dds_compiler_v5_0_readme.txt
+dds_ip\doc\dds_compiler_v5_0_vinfo.html
+dds_ip\doc\ds794_dds_compiler.pdf
+dds_ip_flist.txt
+dds_ip_xmdf.tcl
+demo_tb\tb_dds_ip.vhd

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\FPGA\0_Project\DA_test\da_test.ncd
+OUTFILE=E:\FPGA\0_Project\DA_test\da_test.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=E:\FPGA\0_Project\DA_test
+LICENSE=ISE
+USER_INFO=135256_15690819_173552794_661

@@ -1,0 +1,294 @@
+# Reading D:/modeltech64_10.1c/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.1c Jul 28 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {da_tb.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module pll_ip
+# 
+# Top level modules:
+# 	pll_ip
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module dds
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	dds
+# 	glbl
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module uarttx
+# 
+# Top level modules:
+# 	uarttx
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module uartrx
+# 
+# Top level modules:
+# 	uartrx
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module uartctrl
+# 
+# Top level modules:
+# 	uartctrl
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module fifo8_1_ip
+# 
+# Top level modules:
+# 	fifo8_1_ip
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module clk_div
+# 
+# Top level modules:
+# 	clk_div
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module chipscope_ila
+# 
+# Top level modules:
+# 	chipscope_ila
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module chipscope_icon
+# 
+# Top level modules:
+# 	chipscope_icon
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module da_test
+# 
+# Top level modules:
+# 	da_test
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module da_tb
+# 
+# Top level modules:
+# 	da_tb
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.da_tb glbl 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading work.da_tb(fast)
+# Loading work.da_test(fast)
+# Loading work.dds(fast)
+# Loading unisims_ver.VCC(fast)
+# Loading unisims_ver.GND(fast)
+# Loading unisims_ver.FDE(fast)
+# Loading unisims_ver.FD(fast)
+# Loading unisims_ver.RAMB8BWER(fast)
+# Loading unisims_ver.XORCY(fast)
+# Loading unisims_ver.MUXCY(fast)
+# Loading unisims_ver.LUT2(fast)
+# Loading work.pll_ip(fast)
+# Loading unisims_ver.IBUFG(fast)
+# Loading unisims_ver.DCM_SP(fast)
+# Loading unisims_ver.dcm_sp_clock_divide_by_2(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast__1)
+# Loading unisims_ver.dcm_sp_clock_lost(fast)
+# Loading unisims_ver.BUFG(fast)
+# Loading work.clk_div(fast)
+# Loading work.uartrx(fast)
+# Loading work.fifo8_1_ip(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3_CONV_VER(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_bhv_ver_as(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast__1)
+# Loading work.uarttx(fast)
+# Loading work.uartctrl(fast)
+# Loading work.chipscope_icon(fast)
+# Loading work.chipscope_ila(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-PLI-3691) da_tb.v(90): Expected a system task, not a system function '$fscanf'.
+# 
+#         Region: /da_tb
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+restart
+# Loading work.da_tb(fast)
+# Loading work.da_test(fast)
+# Loading work.dds(fast)
+# Loading unisims_ver.VCC(fast)
+# Loading unisims_ver.GND(fast)
+# Loading unisims_ver.FDE(fast)
+# Loading unisims_ver.FD(fast)
+# Loading unisims_ver.RAMB8BWER(fast)
+# Loading unisims_ver.XORCY(fast)
+# Loading unisims_ver.MUXCY(fast)
+# Loading unisims_ver.LUT2(fast)
+# Loading work.pll_ip(fast)
+# Loading unisims_ver.IBUFG(fast)
+# Loading unisims_ver.DCM_SP(fast)
+# Loading unisims_ver.dcm_sp_clock_divide_by_2(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast__1)
+# Loading unisims_ver.dcm_sp_clock_lost(fast)
+# Loading unisims_ver.BUFG(fast)
+# Loading work.clk_div(fast)
+# Loading work.uartrx(fast)
+# Loading work.fifo8_1_ip(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3_CONV_VER(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_bhv_ver_as(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast__1)
+# Loading work.uarttx(fast)
+# Loading work.uartctrl(fast)
+# Loading work.chipscope_icon(fast)
+# Loading work.chipscope_ila(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-PLI-3691) da_tb.v(90): Expected a system task, not a system function '$fscanf'.
+# 
+#         Region: /da_tb
+add wave -position insertpoint  \
+sim:/da_tb/uut/rdsig
+add wave -position insertpoint  \
+sim:/da_tb/uut/wr_clk
+add wave -position insertpoint  \
+sim:/da_tb/uut/rd_clk
+add wave -position insertpoint  \
+sim:/da_tb/uut/dout
+add wave -position insertpoint  \
+sim:/da_tb/uut/full
+add wave -position insertpoint  \
+sim:/da_tb/uut/empty
+add wave -position insertpoint  \
+sim:/da_tb/uut/ook_out
+add wave -position insertpoint  \
+sim:/da_tb/uut/dadata
+restart
+# Loading work.da_tb(fast)
+# Loading work.da_test(fast)
+# Loading work.dds(fast)
+# Loading unisims_ver.VCC(fast)
+# Loading unisims_ver.GND(fast)
+# Loading unisims_ver.FDE(fast)
+# Loading unisims_ver.FD(fast)
+# Loading unisims_ver.RAMB8BWER(fast)
+# Loading unisims_ver.XORCY(fast)
+# Loading unisims_ver.MUXCY(fast)
+# Loading unisims_ver.LUT2(fast)
+# Loading work.pll_ip(fast)
+# Loading unisims_ver.IBUFG(fast)
+# Loading unisims_ver.DCM_SP(fast)
+# Loading unisims_ver.dcm_sp_clock_divide_by_2(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast__1)
+# Loading unisims_ver.dcm_sp_clock_lost(fast)
+# Loading unisims_ver.BUFG(fast)
+# Loading work.clk_div(fast)
+# Loading work.uartrx(fast)
+# Loading work.fifo8_1_ip(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3_CONV_VER(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_bhv_ver_as(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast__1)
+# Loading work.uarttx(fast)
+# Loading work.uartctrl(fast)
+# Loading work.chipscope_icon(fast)
+# Loading work.chipscope_ila(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-PLI-3691) da_tb.v(90): Expected a system task, not a system function '$fscanf'.
+# 
+#         Region: /da_tb
+run
+# WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+# Causality operation skipped due to absense of debug database file
+add wave -position insertpoint  \
+sim:/da_tb/uut/wr_en
+add wave -position insertpoint  \
+sim:/da_tb/uut/rd_en
+add wave -position insertpoint  \
+sim:/da_tb/uut/valid
+run
+restart
+# Loading work.da_tb(fast)
+# Loading work.da_test(fast)
+# Loading work.dds(fast)
+# Loading unisims_ver.VCC(fast)
+# Loading unisims_ver.GND(fast)
+# Loading unisims_ver.FDE(fast)
+# Loading unisims_ver.FD(fast)
+# Loading unisims_ver.RAMB8BWER(fast)
+# Loading unisims_ver.XORCY(fast)
+# Loading unisims_ver.MUXCY(fast)
+# Loading unisims_ver.LUT2(fast)
+# Loading work.pll_ip(fast)
+# Loading unisims_ver.IBUFG(fast)
+# Loading unisims_ver.DCM_SP(fast)
+# Loading unisims_ver.dcm_sp_clock_divide_by_2(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast__1)
+# Loading unisims_ver.dcm_sp_clock_lost(fast)
+# Loading unisims_ver.BUFG(fast)
+# Loading work.clk_div(fast)
+# Loading work.uartrx(fast)
+# Loading work.fifo8_1_ip(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3_CONV_VER(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_bhv_ver_as(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast__1)
+# Loading work.uarttx(fast)
+# Loading work.uartctrl(fast)
+# Loading work.chipscope_icon(fast)
+# Loading work.chipscope_ila(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-PLI-3691) da_tb.v(90): Expected a system task, not a system function '$fscanf'.
+# 
+#         Region: /da_tb
+run
+# WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+add wave -position insertpoint  \
+sim:/da_tb/uut/rxdata
+restart
+# Loading work.da_tb(fast)
+# Loading work.da_test(fast)
+# Loading work.dds(fast)
+# Loading unisims_ver.VCC(fast)
+# Loading unisims_ver.GND(fast)
+# Loading unisims_ver.FDE(fast)
+# Loading unisims_ver.FD(fast)
+# Loading unisims_ver.RAMB8BWER(fast)
+# Loading unisims_ver.XORCY(fast)
+# Loading unisims_ver.MUXCY(fast)
+# Loading unisims_ver.LUT2(fast)
+# Loading work.pll_ip(fast)
+# Loading unisims_ver.IBUFG(fast)
+# Loading unisims_ver.DCM_SP(fast)
+# Loading unisims_ver.dcm_sp_clock_divide_by_2(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast)
+# Loading unisims_ver.dcm_sp_maximum_period_check(fast__1)
+# Loading unisims_ver.dcm_sp_clock_lost(fast)
+# Loading unisims_ver.BUFG(fast)
+# Loading work.clk_div(fast)
+# Loading work.uartrx(fast)
+# Loading work.fifo8_1_ip(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3(fast)
+# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3_CONV_VER(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_bhv_ver_as(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast)
+# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast__1)
+# Loading work.uarttx(fast)
+# Loading work.uartctrl(fast)
+# Loading work.chipscope_icon(fast)
+# Loading work.chipscope_ila(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-PLI-3691) da_tb.v(90): Expected a system task, not a system function '$fscanf'.
+# 
+#         Region: /da_tb
+run
+# WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+run

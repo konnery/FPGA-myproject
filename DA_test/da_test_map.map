@@ -1,0 +1,387 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'da_test'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o da_test_map.ncd da_test.ngd da_test.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Wed Jul 10 21:08:54 2019
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+----------------------------------------------------------------------
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 26 secs 
+Total CPU  time at the beginning of Placer: 15 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:e87684e2) REAL time: 30 secs 
+
+Phase 2.7  Design Feasibility Check
+WARNING:Place:1206 - This design contains a global buffer instance,
+   <pll/clkout1_buf>, driving the net, <daclk_OBUF>, that is driving the
+   following (first 30) non-clock load pins off chip.
+   < PIN: daclk.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was
+   applied on COMP.PIN <pll/clkout1_buf.O> allowing your design to continue.
+   This constraint disables all clock placer rules related to the specified
+   COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <pll/clkout1_buf>, driving the net,
+   <daclk_OBUF>, that is driving the following (first 30) non-clock load pins.
+   < PIN: daclk.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN <pll/clkout1_buf.O>
+   allowing your design to continue. This constraint disables all clock placer
+   rules related to the specified COMP.PIN.
+Phase 2.7  Design Feasibility Check (Checksum:e87684e2) REAL time: 30 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:3217cf6f) REAL time: 30 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:b5938655) REAL time: 33 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:b5938655) REAL time: 33 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:b5938655) REAL time: 33 secs 
+
+Phase 7.3  Local Placement Optimization
+Phase 7.3  Local Placement Optimization (Checksum:b5938655) REAL time: 33 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:b5938655) REAL time: 33 secs 
+
+Phase 9.8  Global Placement
+...................
+...........
+Phase 9.8  Global Placement (Checksum:eb67e635) REAL time: 37 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:eb67e635) REAL time: 37 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:33cdaa65) REAL time: 39 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:33cdaa65) REAL time: 39 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:9816b48f) REAL time: 40 secs 
+
+Total REAL time to Placer completion: 40 secs 
+Total CPU  time to Placer completion: 25 secs 
+Running post-placement packing...
+Writing output files...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL0<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[25].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[17].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[20].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[12].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[7].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[2].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[23].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[15].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[10].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[5].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[0].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[26].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[18].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[21].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[13].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[8].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[3].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[24].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[16].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[11].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[6].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[1].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[27].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[19].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[22].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[14].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is
+   configured to use input parity pin DIBP0. There is dangling output for parity
+   pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[9].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
+   on
+   block:<ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BU
+   FFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_R
+   AMB18[4].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The block is configured
+   to use input parity pin DIBP0. There is dangling output for parity pin DOPB0.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   32
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,502 out of  18,224    8%
+    Number used as Flip Flops:               1,501
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,075 out of   9,112   11%
+    Number used as logic:                      470 out of   9,112    5%
+      Number using O6 output only:             266
+      Number using O5 output only:             121
+      Number using O5 and O6:                   83
+      Number used as ROM:                        0
+    Number used as Memory:                     304 out of   2,176   13%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           304
+        Number using O6 output only:           190
+        Number using O5 output only:             0
+        Number using O5 and O6:                114
+    Number used exclusively as route-thrus:    301
+      Number with same-slice register load:    272
+      Number with same-slice carry load:        29
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   473 out of   2,278   20%
+  Number of MUXCYs used:                       344 out of   4,556    7%
+  Number of LUT Flip Flop pairs used:        1,411
+    Number with an unused Flip Flop:           364 out of   1,411   25%
+    Number with an unused LUT:                 336 out of   1,411   23%
+    Number of fully used LUT-FF pairs:         711 out of   1,411   50%
+    Number of unique control sets:              76
+    Number of slice register sites lost
+      to control set restrictions:             392 out of  18,224    2%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        13 out of     232    5%
+    Number of LOCed IOBs:                       13 out of      13  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        29 out of      32   90%
+  Number of RAMB8BWERs:                          2 out of      64    3%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       5 out of      16   31%
+    Number used as BUFGs:                        5
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.60
+
+Peak Memory Usage:  533 MB
+Total REAL time to MAP completion:  42 secs 
+Total CPU time to MAP completion:   28 secs 
+
+Mapping completed.
+See MAP report file "da_test_map.mrp" for details.
